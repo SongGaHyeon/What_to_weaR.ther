@@ -30,6 +30,8 @@ class DetailView(generic.DetailView):
         """
         return Question.objects.filter(pub_date__lte=timezone.now())
 
+    Question.objects.filter(pub_date__lte=timezone.now())
+
 
 class ResultsView(generic.DetailView):
     model = Question
@@ -49,14 +51,17 @@ def vote(request, question_id):
     else:
         selected_choice.votes += 1
         selected_choice.save()
+        # Always return an HttpResponseRedirect after successfully dealing
+        # with POST data. This prevents data from being posted twice if a
+        # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
 
-# def get_queryset(self):
-#     """
-#     Return the last five published questions (not including those set to be
-#     published in the future).
-#     """
-#     return Question.objects.filter(
-#         pub_date__lte=timezone.now()
-#     ).order_by('-pub_date')[:5]
+def get_queryset(self):
+    """
+    Return the last five published questions (not including those set to be
+    published in the future).
+    """
+    return Question.objects.filter(
+        pub_date__lte=timezone.now()
+    ).order_by('-pub_date')[:5]
