@@ -1,0 +1,33 @@
+<!-- <h1>Contact Us</h1>
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label for="name">Name: </label><br>
+    <input id="name" name="name" type="text" placeholder="Enter your name">
+  </div>
+  <div>
+    <label for="sbj">Subject: </label><br>
+    <input id="sbj" name="subject" type="text" placeholder="Enter subject">
+  </div>
+  <div>
+    <label for="msg">Message: </label><br>
+    <input id="msg" name="message" type="text" placeholder="Enter your message here..." style="width:200px;height:200px;">
+  </div>
+  <div class="form-actions">
+    <button type="submit">Send</button>
+  </div>
+</form> -->
+
+<div style="margin:80px">
+  <h1>Contact</h1>
+  <h4>Contact us directly if you have any questions</h4>
+  <p>
+    Please write your name, email address and a message below if you have any questions.
+    One of our staff members will be happy to contact you directly and answer your questions as soon as possible.
+  </p>
+  <form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Submit</button>
+  </form>
+</div>
