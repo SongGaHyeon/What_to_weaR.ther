@@ -2,11 +2,14 @@ from ast import arg
 from re import template
 from select import select
 
-from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse
 from django.views import generic
 from django.utils import timezone
+from django.core.mail import EmailMessage
+from django.template.loader import render_to_string
 
 from .models import Choice, Question
 
@@ -32,10 +35,14 @@ class DetailView(generic.DetailView):
 
     Question.objects.filter(pub_date__lte=timezone.now())
 
+    
+
 
 class ResultsView(generic.DetailView):
     model = Question
     template_name = 'polls/results.html'
+
+
 
 
 def vote(request, question_id):
@@ -65,3 +72,6 @@ def get_queryset(self):
     return Question.objects.filter(
         pub_date__lte=timezone.now()
     ).order_by('-pub_date')[:5]
+
+
+
