@@ -10,7 +10,6 @@ from django.views import generic
 from django.utils import timezone
 from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
-from mysite.forms import ContactForm
 
 from .models import Choice, Question
 
@@ -74,26 +73,5 @@ def get_queryset(self):
         pub_date__lte=timezone.now()
     ).order_by('-pub_date')[:5]
 
-def homepage(request):
-	return render(request, "polls/index.html")
 
-def contact(request):
-	if request.method == 'POST':
-		form = ContactForm(request.POST)
-		if form.is_valid():
-			subject = "Website Inquiry" 
-			body = {
-            'subject': form.cleaned_data['subject'], 
-			'name': form.cleaned_data['name'], 
-			'message':form.cleaned_data['message'], 
-			}
-			message = "\n".join(body.values())
 
-			try:
-				send_mail(subject, message, 'admin@example.com', ['lee_yechan@hufs.ac.kr']) 
-			except BadHeaderError:
-				return HttpResponse('Invalid header found.')
-			return redirect ("polls:index")
-
-	form = ContactForm()
-	return render(request, "polls/index.html", {'form':form})
