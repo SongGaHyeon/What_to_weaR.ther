@@ -20,5 +20,6 @@ import recommendation.views
 
 urlpatterns = [
     path('recommendation/', recommendation.views.index, name='index'),
+    path('recommendation/contact/', recommendation.views.contact, name="contact"),
     path('admin/', admin.site.urls),
 ]
