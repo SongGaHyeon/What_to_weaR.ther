@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>clothes recommend base weather</title>
+
+    <link rel="canonical" href="https://getbootstrap.kr/docs/5.1/examples/album/">
+    <script src="https://kit.fontawesome.com/e3383247df.js" crossorigin="anonymous"></script>
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+<link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#7952b3">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    
+<header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About</h4>
+          <p class="text-muted">날씨 기반 옷 추천 웹 페이지 입니다.</p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Contact</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Follow on Twitter</a></li>
+            <li><a href="#" class="text-white">Like on Facebook</a></li>
+            <li><a href="#" class="text-white">Email me</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <strong>LIAOS</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">오늘 뭐 입지?</h1>
+        <p class="lead text-muted">날씨 기반 옷 추천 시스템</p>
+        <p style="font-weight: bold;">
+            weather information 
+        </p>
+        <i class="fa-solid fa-cloud-moon cloudmoon"></i>
+        <p>
+            <div>
+                지역 : 서울 
+            </div>
+            <div>
+                최고 온도: 21'
+            </div>
+            <div>
+                최저 온도: 14'
+            </div>
+        </p>
+      </div>
+    </div>
+    <h2 class="h5 mb-5 text-center">You may also like these products</h2>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://image.msscdn.net/images/goods_img/20180619/803523/803523_1_500.jpg" width="2000" height="220" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">반팔티(nerdy)</h5>
+                      <p class="card-text">검정 무지 반팔티</p>
+                      <a href="https://www.musinsa.com/app/goods/2500664" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://img01.gosister.co.kr/goods/up_img/OUT-25890_S1_26.gif" width="200" height="220" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">가디건</h5>
+                      <p class="card-text">색감 좋은 가디건</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://contents.sixshop.com/thumbnails/uploadedFiles/73125/product/image_1611209594746_750.jpg" width="200" height="220" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">니트</h5>
+                      <p class="card-text">브라운 니트(남)</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="http://img4.tmon.kr/cdn2/deals/2019/01/17/1768474370/front_13bd9_i2ph0.jpg" width="200" height="220" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">코트</h5>
+                      <p class="card-text">검정 코트(남)</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>    
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://they.kr/web/product/small/202201/3d8f5fa79a9e440ca41013a1b818cd19.jpg" width="200" height="220" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">자켓</h5>
+                      <p class="card-text">브라운 댄디 자켓</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>    
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://image.msscdn.net/images/goods_img/20201011/1642331/1642331_1_500.jpg" width="200" height="220" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">크롭 오버핏 가죽자켓</h5>
+                      <p class="card-text">크롭 마일드레더 가죽자켓(여)</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-0"> <a href="/"></a> <a href=""></a>.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
