@@ -4,12 +4,12 @@ import time
 
 browser = webdriver.Chrome('C:/chromedriver.exe')
 browser.get('https://www.musinsa.com/app/')
-browser.implicitly_wait(5)
+browser.implicitly_wait(3)
 
 search = browser.find_element_by_css_selector('input.search.head-search-inp')
 search.click()
 
-search.send_keys('가디건')
+search.send_keys('겨울바지')
 search.send_keys(Keys.ENTER)
 
 time.sleep(2)
@@ -34,3 +34,13 @@ while True:
     if after_h == before_h:
         break
     before_h = after_h
+
+items = browser.find_elements_by_css_selector("#searchList li.li_box")
+
+for item in items:
+    title = item.find_element_by_css_selector(
+        ".list_img > a").get_attribute('title')
+    print(title)
+    link = item.find_element_by_css_selector(
+        ".list_img > a").get_attribute('href')
+    print(link)
