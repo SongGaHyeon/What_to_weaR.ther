@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
+import csv
 
 browser = webdriver.Chrome('C:/chromedriver.exe')
 browser.maximize_window()
@@ -36,6 +37,9 @@ while True:
         break
     before_h = after_h
 
+f = open(r"목도리_data.csv", 'w', encoding='CP949', newline='')
+csvWriter = csv.writer(f)
+
 items = browser.find_elements_by_css_selector("#searchList li.li_box")
 
 for item in items:
@@ -49,3 +53,4 @@ for item in items:
     image = item.find_element_by_css_selector(
         ".lazyload.lazy").get_attribute('data-original')
     print(image)
+    csvWriter.writerow([title, link, image])

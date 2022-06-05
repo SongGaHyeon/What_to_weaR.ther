@@ -3,6 +3,11 @@ from selenium.webdriver.common.keys import Keys
 import time
 import csv
 
+
+# options = webdriver.ChromeOptions()
+# options.add_argument("headless")
+# driver = webdriver.Chrome('C:/chromedriver.exe', options=options)
+
 browser = webdriver.Chrome('C:/chromedriver.exe')
 browser.get('https://www.musinsa.com/app/')
 browser.implicitly_wait(3)
@@ -54,3 +59,5 @@ for item in items:
         ".lazyload.lazy").get_attribute('data-original')
     print(image)
     csvWriter.writerow([title, link, image])
+
+# driver.quit()
