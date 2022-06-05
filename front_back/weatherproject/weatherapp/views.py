@@ -10,6 +10,5 @@ def index(request):
     r = requests.get(url=URL, params=PARAMS)
     res = r.json()
     icon = res['weather'][0]['icon']
-    temp_min = res['main']['temp_min']
-    temp_max = res['main']['temp_max']
-    return render(request, 'weatherapp/index.html', {'icon':icon, 'temp_min':temp_min, 'temp_max':temp_max, 'city':city})
+    temp = res['main']['temp']
+    return render(request, 'weatherapp/index.html', {'icon':icon, 'temp':temp, 'city':city})
