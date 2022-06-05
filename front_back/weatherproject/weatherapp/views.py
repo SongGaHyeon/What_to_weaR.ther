@@ -3,10 +3,7 @@ import requests
 
 # Create your views here.
 def index(request):
-    if 'city' in request.POST:
-        city = request.POST['city']
-    else:
-        city = 'Seoul'
+    city = 'Seoul'
     appid = '0de8ed3564750bc9221f0e10a4a2031d'
     URL = 'https://api.openweathermap.org/data/2.5/weather'
     PARAMS = {'q':city, 'appid':appid, 'units':'metric'}

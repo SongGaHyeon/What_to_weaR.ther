@@ -88,19 +88,6 @@
                     <p style="font-weight: bold;">
                         weather information
                     </p>
-                    <form method="POST">{% csrf_token %}
-                        <select name="city" id="city">
-                <option value="">--Please select a city--</option>
-                <option value="Seoul">Seoul</option>
-                <option value="Gangneung">Gangneung</option>
-                <option value="Daejeon">Daejeon</option>
-                <option value="Daegu">Daegu</option>
-                <option value="Gwangju">Gwangju</option>
-                <option value="Busan">Busan</option>
-                <option value="Jeju city">Jeju city</option>
-            </select>
-                        <button type="submit">Enter</button>
-                    </form>
                     <img src="http://openweathermap.org/img/w/{{icon}}.png" width="75px" />
                     <p>
                         <div>
