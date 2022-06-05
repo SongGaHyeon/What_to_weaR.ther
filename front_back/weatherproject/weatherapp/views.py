@@ -79,7 +79,7 @@ def index(request):
     icon = res['weather'][0]['icon']
     temp = res['main']['temp']
 
-    return render(request, 'weatherapp/index.html', {'icon': icon, 'temp': temp, 'city': city, 'subject':, 'address': b, 'img': c})
+    return render(request, 'weatherapp/index.html', {'icon': icon, 'temp': temp, 'city': city, 'subject': a, 'address': b, 'img': c})
     # 1_subject, 2_subject, ~~6_subject
     # 1_address, ......~~6_address
     # 1_img,..., 2_sub
