@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
+import csv
 
 browser = webdriver.Chrome('C:/chromedriver.exe')
 browser.get('https://www.musinsa.com/app/')
@@ -35,6 +36,8 @@ while True:
         break
     before_h = after_h
 
+f = open(r"여름바지_data.csv", 'w', encoding='CP949', newline='')
+csvWriter = csv.writer(f)
 items = browser.find_elements_by_css_selector("#searchList li.li_box")
 
 for item in items:
@@ -44,3 +47,7 @@ for item in items:
     link = item.find_element_by_css_selector(
         ".list_img > a").get_attribute('href')
     print(link)
+    image = item.find_element_by_css_selector(
+        ".lazyload.lazy").get_attribute('data-original')
+    print(image)
+    csvWriter.writerow([title, link, image])

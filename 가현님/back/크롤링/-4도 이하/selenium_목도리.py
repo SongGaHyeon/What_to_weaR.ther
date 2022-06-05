@@ -3,6 +3,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 browser = webdriver.Chrome('C:/chromedriver.exe')
+browser.maximize_window()
 browser.get('https://www.musinsa.com/app/')
 browser.implicitly_wait(3)
 
@@ -44,3 +45,7 @@ for item in items:
     link = item.find_element_by_css_selector(
         ".list_img > a").get_attribute('href')
     print(link)
+
+    image = item.find_element_by_css_selector(
+        ".lazyload.lazy").get_attribute('data-original')
+    print(image)
