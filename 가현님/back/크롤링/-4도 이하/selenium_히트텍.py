@@ -38,6 +38,7 @@ while True:
 
 f = open(r"히트텍_data.csv", 'w', encoding='CP949', newline='')
 csvWriter = csv.writer(f)
+
 items = browser.find_elements_by_css_selector("#searchList li.li_box")
 
 for item in items:

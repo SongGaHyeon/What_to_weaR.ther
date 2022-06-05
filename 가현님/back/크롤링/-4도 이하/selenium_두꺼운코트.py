@@ -10,7 +10,7 @@ browser.implicitly_wait(3)
 search = browser.find_element_by_css_selector('input.search.head-search-inp')
 search.click()
 
-search.send_keys('두꺼운 코트')
+search.send_keys('코트')
 search.send_keys(Keys.ENTER)
 
 time.sleep(2)
