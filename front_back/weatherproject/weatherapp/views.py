@@ -82,7 +82,7 @@ def index(request):
     return render(request, 'weatherapp/index.html', {'icon': icon, 'temp': temp,
                                                      '1_subject' : a[0], '2_subject' : b[0], '3_subject' : c[0], '4_subject' : d[0], '5_subject' : e[0], '6_subject' : f[0],
                                                      '1_address' : a[1], '2_address' : b[1], '3_address' : c[1], '4_address' : d[1], '5_address' : e[1], '6_address' : f[1],
-                                                     '1_img' : a[0], '2_img' : b[0], '3_img' : c[0], '4_img' : d[0], '5_img' : e[0], '6_img' : f[0],})
+                                                     '1_img' : a[2], '2_img' : b[2], '3_img' : c[2], '4_img' : d[2], '5_img' : e[2], '6_img' : f[2],})
     # 1_subject, 2_subject, ~~6_subject
     # 1_address, ......~~6_address
     # 1_img,..., 2_sub
