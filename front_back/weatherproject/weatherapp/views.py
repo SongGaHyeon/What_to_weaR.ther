@@ -160,9 +160,183 @@ def fifteen_nineteen():
 # -------------------------------------------------------
 # 20-23도
 
+def twenty_twentythree():
+    a = seven_pants()
+    one_subject = a[0]
+    one = a[1]
+    one_img = a[2]
+
+    b = long_sleeve()
+    two_subject = b[0]
+    two_address = b[1]
+    two_img = b[2]
+
+    c = cotton_pants()
+    three_subject = c[0]
+    three_address = c[1]
+    three_img = c[2]
+
+    d = shirts()
+    four_subject = d[0]
+    four_address = d[1]
+    four_img = d[2]
+
+    e = slacks()
+    five_subject = e[0]
+    five_address = e[1]
+    five_img = e[2]
+
+    f = dress()
+    six_subject = f[0]
+    six_address = f[1]
+    six_img = f[2]
+
+# -------------------------------------------------------
+# 24도 이상
+
+def plus24():
+    a = sleeveless()
+    one_subject = a[0]
+    one = a[1]
+    one_img = a[2]
+
+    b = shorts()
+    two_subject = b[0]
+    two_address = b[1]
+    two_img = b[2]
+
+    c = short_shirts()
+    three_subject = c[0]
+    three_address = c[1]
+    three_img = c[2]
+
+    d = short_sleeve()
+    four_subject = d[0]
+    four_address = d[1]
+    four_img = d[2]
+
+    e = summer_pants()
+    five_subject = e[0]
+    five_address = e[1]
+    five_img = e[2]
+
+    f = skirt()
+    six_subject = f[0]
+    six_address = f[1]
+    six_img = f[2]
 
 # -------------------------------------------------------
 # 옷별 함수
+
+def skirt():
+    skirt_data = []
+    f = open('치마_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        skirt_data.append(line)
+
+    f.close()
+    return skirt_data[i]
+
+def summer_pants():
+    summerpants_data = []
+    f = open('여름바지_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        summerpants_data.append(line)
+
+    f.close()
+    return summerpants_data[i]
+
+def short_sleeve():
+    shortsleeve_data = []
+    f = open('반팔티_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        shortsleeve_data.append(line)
+
+    f.close()
+    return shortsleeve_data[i]
+
+def short_shirts():
+    shortshirts_data = []
+    f = open('반팔셔츠_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        shortshirts_data.append(line)
+
+    f.close()
+    return shortshirts_data[i]    
+
+def shorts():
+    shorts_data = []
+    f = open('반바지_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        shorts_data.append(line)
+
+    f.close()
+    return shorts_data[i]
+
+def sleeveless():
+    sleeveless_data = []
+    f = open('민소매_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        sleeveless_data.append(line)
+
+    f.close()
+    return sleeveless_data[i]
+
+def dress():
+    dress_data = []
+    f = open('원피스_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        dress_data.append(line)
+
+    f.close()
+    return dress_data[i]
+
+def shirts():
+    shirts_data = []
+    f = open('셔츠_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        shirts_data.append(line)
+
+    f.close()
+    return shirts_data[i]
+
+def long_sleeve():
+    longsleeve_data = []
+    f = open('긴팔티_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        longsleeve_data.append(line)
+
+    f.close()
+    return longsleeve_data[i]
+
+def seven_pants():
+    sevenpants_data = []
+    f = open('7부바지_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        sevenpants_data.append(line)
+
+    f.close()
+    return sevenpants_data[i]
 
 def bluejacket():
     bluejacket_data = []
