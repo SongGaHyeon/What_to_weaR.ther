@@ -21,12 +21,49 @@ c = []
 d = []
 e = []
 f = []
-
+one_subject = ''
+one_address = ''
+one_img = ''
+two_subject = ''
+two_address = ''
+two_img = ''
+three_subject = ''
+three_address = ''
+three_img = ''
+four_subject = ''
+four_address = ''
+four_img = ''
+five_subject = ''
+five_address = ''
+five_img = ''
+six_subject = ''
+six_address = ''
+six_img = ''
 # -------------------------------------------------------
 # 4도 이하
 
 
 def minus4():
+    global a, b, c, d, e, f
+    global  one_subject
+    global  one_address
+    global  one_img
+    global  two_subject
+    global  two_address
+    global  two_img
+    global  three_subject
+    global  three_address
+    global  three_img
+    global  four_subject
+    global  four_address
+    global  four_img
+    global  five_subject
+    global  five_address
+    global  five_img
+    global  six_subject
+    global  six_address
+    global  six_img
+
     a = winter_pants()
     one_subject = a[0]
     one_address = a[1]
@@ -62,6 +99,25 @@ def minus4():
 
 
 def five_eight():
+    global a, b, c, d, e, f
+    global one_subject
+    global one_address
+    global one_img
+    global two_subject
+    global two_address
+    global two_img
+    global three_subject
+    global three_address
+    global three_img
+    global four_subject
+    global four_address
+    global four_img
+    global five_subject
+    global five_address
+    global five_img
+    global six_subject
+    global six_address
+    global six_img
     a = leatherjacket()
     one_subject = a[0]
     one_address = a[1]
@@ -97,6 +153,25 @@ def five_eight():
 
 
 def nine_fourteen():
+    global a, b, c, d, e, f
+    global one_subject
+    global one_address
+    global one_img
+    global two_subject
+    global two_address
+    global two_img
+    global three_subject
+    global three_address
+    global three_img
+    global four_subject
+    global four_address
+    global four_img
+    global five_subject
+    global five_address
+    global five_img
+    global six_subject
+    global six_address
+    global six_img
     a = furhood()
     one_subject = a[0]
     one_address = a[1]
@@ -132,6 +207,25 @@ def nine_fourteen():
 
 
 def fifteen_nineteen():
+    global a, b, c, d, e, f
+    global one_subject
+    global one_address
+    global one_img
+    global two_subject
+    global two_address
+    global two_img
+    global three_subject
+    global three_address
+    global three_img
+    global four_subject
+    global four_address
+    global four_img
+    global five_subject
+    global five_address
+    global five_img
+    global six_subject
+    global six_address
+    global six_img
     a = cardigan()
     one_subject = a[0]
     one_address = a[1]
@@ -167,6 +261,25 @@ def fifteen_nineteen():
 
 
 def twenty_twentythree():
+    global a, b, c, d, e, f
+    global one_subject
+    global one_address
+    global one_img
+    global two_subject
+    global two_address
+    global two_img
+    global three_subject
+    global three_address
+    global three_img
+    global four_subject
+    global four_address
+    global four_img
+    global five_subject
+    global five_address
+    global five_img
+    global six_subject
+    global six_address
+    global six_img
     a = seven_pants()
     one_subject = a[0]
     one_address = a[1]
@@ -202,6 +315,25 @@ def twenty_twentythree():
 
 
 def plus24():
+    global a, b, c, d, e, f
+    global one_subject
+    global one_address
+    global one_img
+    global two_subject
+    global two_address
+    global two_img
+    global three_subject
+    global three_address
+    global three_img
+    global four_subject
+    global four_address
+    global four_img
+    global five_subject
+    global five_address
+    global five_img
+    global six_subject
+    global six_address
+    global six_img
     a = sleeveless()
     one_subject = a[0]
     one_address = a[1]
@@ -652,4 +784,4 @@ def index(request):
     icon = res['weather'][0]['icon']
     temp = res['main']['temp']
 
-    return render(request, 'weatherapp/index.html', {'icon': icon, 'temp': temp, 'one_subject': a[0], 'two_subject': b[0], 'three_subject': c[0], 'four_subject': d[0], 'five_subject': e[0], 'six_subject': f[0], 'one_address': a[1], 'two_address': b[1], 'three_address': c[1], 'four_address': d[1], 'five_address': e[1], 'six_address': f[1], 'one_img': a[2], 'two_img': b[2], 'three_img': c[2], 'four_img': d[2], 'five_img': e[2], 'six_img': f[2], })
+    return render(request, 'weatherapp/index.html', {'icon': icon, 'temp': temp, 'one_subject': one_subject, 'two_subject': two_subject, 'three_subject': three_subject, 'four_subject': four_subject, 'five_subject': five_subject, 'six_subject': six_subject, 'one_address': one_address, 'two_address': two_address, 'three_address': three_address, 'four_address': four_address, 'five_address': five_address, 'six_address': six_address, 'one_img': one_img, 'two_img': two_img, 'three_img': three_img, 'four_img': four_img, 'five_img': five_img, 'six_img': six_img, })
