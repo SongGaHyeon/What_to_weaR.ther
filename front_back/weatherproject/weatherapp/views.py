@@ -126,7 +126,36 @@ def nine_fourteen():
 
 # -------------------------------------------------------
 #  15-19도
+def fifteen_nineteen():
+    a = cardigan()
+    one_subject = a[0]
+    one = a[1]
+    one_img = a[2]
 
+    b = sweatshirt()
+    two_subject = b[0]
+    two_address = b[1]
+    two_img = b[2]
+
+    c = cotton_pants()
+    three_subject = c[0]
+    three_address = c[1]
+    three_img = c[2]
+
+    d = slacks()
+    four_subject = d[0]
+    four_address = d[1]
+    four_img = d[2]
+
+    e = thin_knit()
+    five_subject = e[0]
+    five_address = e[1]
+    five_img = e[2]
+
+    f = bluejacket()
+    six_subject = f[0]
+    six_address = f[1]
+    six_img = f[2]
 
 # -------------------------------------------------------
 # 20-23도
@@ -134,6 +163,72 @@ def nine_fourteen():
 
 # -------------------------------------------------------
 # 옷별 함수
+
+def bluejacket():
+    bluejacket_data = []
+    f = open('청자켓_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        bluejacket_data.append(line)
+
+    f.close()
+    return bluejacket_data[i]
+
+def thin_knit():
+    thinknit_data = []
+    f = open('얇은니트_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        thinknit_data.append(line)
+
+    f.close()
+    return thinknit_data[i]
+
+def slacks():
+    slacks_data = []
+    f = open('슬랙스_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        slacks_data.append(line)
+
+    f.close()
+    return slacks_data[i]
+
+def cotton_pants():
+    cottonpants_data = []
+    f = open('면바지_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        cottonpants_data.append(line)
+
+    f.close()
+    return cottonpants_data[i]
+
+def sweatshirt():
+    sweatshirt_data = []
+    f = open('맨투맨_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        sweatshirt_data.append(line)
+
+    f.close()
+    return sweatshirt_data[i]
+
+def cardigan():
+    cardigan_data = []
+    f = open('가디건_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        cardigan_data.append(line)
+
+    f.close()
+    return cardigan_data[i]
 
 def airlinejumper():
     airlinejumper_data = []
