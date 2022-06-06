@@ -22,6 +22,8 @@ d = []
 e = []
 f = []
 
+# -------------------------------------------------------
+# 4도 이하
 
 def minus4():
     a = winter_pants()
@@ -55,7 +57,7 @@ def minus4():
     six_img = f[2]
 
 # ----------------------------------------------
-
+# 5-8도
 
 def five_eight():
     a = leatherjacket()
@@ -88,10 +90,105 @@ def five_eight():
     six_address = f[1]
     six_img = f[2]
 
-# -------------------------------------------------------
-# def 5~8():
-#     위랑 같은 방식으로
+# ----------------------------------------------
+#9-14도
 
+def nine_fourteen():
+    a = furhood()
+    one_subject = a[0]
+    one = a[1]
+    one_img = a[2]
+
+    b = knit()
+    two_subject = b[0]
+    two_address = b[1]
+    two_img = b[2]
+
+    c = fieldjumper()
+    three_subject = c[0]
+    three_address = c[1]
+    three_img = c[2]
+
+    d = jean()
+    four_subject = d[0]
+    four_address = d[1]
+    four_img = d[2]
+
+    e = trenchcoat()
+    five_subject = e[0]
+    five_address = e[1]
+    five_img = e[2]
+
+    f = airlinejumper()
+    six_subject = f[0]
+    six_address = f[1]
+    six_img = f[2]
+
+# -------------------------------------------------------
+#  15-19도
+
+
+# -------------------------------------------------------
+# 20-23도
+
+
+# -------------------------------------------------------
+# 옷별 함수
+
+def airlinejumper():
+    airlinejumper_data = []
+    f = open('항공점퍼_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        airlinejumper_data.append(line)
+
+    f.close()
+    return airlinejumper_data[i]
+
+def trenchcoat():
+    trenchcoat_data = []
+    f = open('트렌치코트_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        trenchcoat_data.append(line)
+
+    f.close()
+    return trenchcoat_data[i]
+
+def jean():
+    jean_data = []
+    f = open('청바지_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        jean_data.append(line)
+
+    f.close()
+    return jean_data[i]
+
+def fieldjumper():
+    fieldjumper_data = []
+    f = open('야상_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        fieldjumper_data.append(line)
+
+    f.close()
+    return fieldjumper_data[i]
+
+def knit():
+    knit_data = []
+    f = open('니트_data.csv', 'r')
+    rdr = csv.reader(f)
+
+    for line in rdr:
+        knit_data.append(line)
+
+    f.close()
+    return knit_data[i]
 
 def furhood():
     furhood_data = []
