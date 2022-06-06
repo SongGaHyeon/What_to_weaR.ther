@@ -36,7 +36,7 @@ while True:
         break
     before_h = after_h
 
-f = open(r"두꺼운코트_data.csv", 'w', encoding='CP949', newline='')
+f = open(r"코트_data.csv", 'w', encoding='CP949', newline='')
 csvWriter = csv.writer(f)
 
 items = browser.find_elements_by_css_selector("#searchList li.li_box")
