@@ -50,7 +50,5 @@ for item in items:
     image = item.find_element_by_css_selector(
         ".lazyload.lazy").get_attribute('data-original')
     print(image)
-    image = item.find_element_by_css_selector(
-        ".lazyload.lazy").get_attribute('data-original')
-    print(image)
+
     csvWriter.writerow([title, link, image])
