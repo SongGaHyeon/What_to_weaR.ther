@@ -25,6 +25,7 @@ f = []
 # -------------------------------------------------------
 # 4도 이하
 
+
 def minus4():
     a = winter_pants()
     one_subject = a[0]
@@ -59,10 +60,11 @@ def minus4():
 # ----------------------------------------------
 # 5-8도
 
+
 def five_eight():
     a = leatherjacket()
     one_subject = a[0]
-    one = a[1]
+    one_address = a[1]
     one_img = a[2]
 
     b = lightpadding()
@@ -91,12 +93,13 @@ def five_eight():
     six_img = f[2]
 
 # ----------------------------------------------
-#9-14도
+# 9-14도
+
 
 def nine_fourteen():
     a = furhood()
     one_subject = a[0]
-    one = a[1]
+    one_address = a[1]
     one_img = a[2]
 
     b = knit()
@@ -146,6 +149,7 @@ def airlinejumper():
     f.close()
     return airlinejumper_data[i]
 
+
 def trenchcoat():
     trenchcoat_data = []
     f = open('트렌치코트_data.csv', 'r')
@@ -156,6 +160,7 @@ def trenchcoat():
 
     f.close()
     return trenchcoat_data[i]
+
 
 def jean():
     jean_data = []
@@ -168,6 +173,7 @@ def jean():
     f.close()
     return jean_data[i]
 
+
 def fieldjumper():
     fieldjumper_data = []
     f = open('야상_data.csv', 'r')
@@ -179,6 +185,7 @@ def fieldjumper():
     f.close()
     return fieldjumper_data[i]
 
+
 def knit():
     knit_data = []
     f = open('니트_data.csv', 'r')
@@ -189,6 +196,7 @@ def knit():
 
     f.close()
     return knit_data[i]
+
 
 def furhood():
     furhood_data = []
