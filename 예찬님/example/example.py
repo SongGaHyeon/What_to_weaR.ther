@@ -1,15 +1,34 @@
 import csv
+import random
 
-f = open('겨울바지_data.csv', 'r')
-rdr = csv.reader(f)
+i = random.randrange(0, 89)
+a = []
+one_subject = ''
+one_address = ''
+one_img = ''
 
-data = []
+def summer_pants():
+    summerpants_data = []
+    f = open('templates/clothes/겨울바지_data.csv', 'r')
+    rdr = csv.reader(f)
 
-for line in rdr:
-    data.append(line)
+    for line in rdr:
+        summerpants_data.append(line)
 
-f.close()
+    f.close()
+    return summerpants_data[i]
 
-print(data)
+def fifteen_nineteen():
+    global a
+    global one_subject
+    global one_address
+    global one_img
 
-data[i][]
+    a = summer_pants()
+    one_subject = a[0]
+    one_address = a[1]
+    one_img = a[2]
+
+fifteen_nineteen()
+print(one_subject)
+
