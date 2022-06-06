@@ -5,6 +5,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 import csv
 import random
+import os
 
 # Create your views here.
 
@@ -784,4 +785,21 @@ def index(request):
     icon = res['weather'][0]['icon']
     temp = res['main']['temp']
 
-    return render(request, 'weatherapp/index.html', {'icon': icon, 'temp': temp, 'one_subject': one_subject, 'two_subject': two_subject, 'three_subject': three_subject, 'four_subject': four_subject, 'five_subject': five_subject, 'six_subject': six_subject, 'one_address': one_address, 'two_address': two_address, 'three_address': three_address, 'four_address': four_address, 'five_address': five_address, 'six_address': six_address, 'one_img': one_img, 'two_img': two_img, 'three_img': three_img, 'four_img': four_img, 'five_img': five_img, 'six_img': six_img, })
+    if temp < 5:
+        minus4()
+    elif 5 <= temp < 9:
+        five_eight()
+    elif 9 <= temp < 15:
+        nine_fourteen()
+    elif 15 <= temp < 20:
+        fifteen_nineteen()
+    elif 20 <= temp < 24:
+        twenty_twentythree()
+    elif 24 <= temp:
+        plus24()
+
+
+    return render(request, 'weatherapp/index.html', {'icon': icon, 'temp': temp,
+                                                     'one_subject': one_subject, 'two_subject': two_subject, 'three_subject': three_subject, 'four_subject': four_subject, 'five_subject': five_subject, 'six_subject': six_subject,
+                                                     'one_address': one_address, 'two_address': two_address, 'three_address': three_address, 'four_address': four_address, 'five_address': five_address, 'six_address': six_address,
+                                                     'one_img': one_img, 'two_img': two_img, 'three_img': three_img, 'four_img': four_img, 'five_img': five_img, 'six_img': six_img, })
