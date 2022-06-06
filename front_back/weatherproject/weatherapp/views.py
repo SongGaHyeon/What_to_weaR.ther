@@ -45,24 +45,24 @@ six_img = ''
 
 def minus4():
     global a, b, c, d, e, f
-    global  one_subject
-    global  one_address
-    global  one_img
-    global  two_subject
-    global  two_address
-    global  two_img
-    global  three_subject
-    global  three_address
-    global  three_img
-    global  four_subject
-    global  four_address
-    global  four_img
-    global  five_subject
-    global  five_address
-    global  five_img
-    global  six_subject
-    global  six_address
-    global  six_img
+    global one_subject
+    global one_address
+    global one_img
+    global two_subject
+    global two_address
+    global two_img
+    global three_subject
+    global three_address
+    global three_img
+    global four_subject
+    global four_address
+    global four_img
+    global five_subject
+    global five_address
+    global five_img
+    global six_subject
+    global six_address
+    global six_img
 
     a = winter_pants()
     one_subject = a[0]
@@ -367,10 +367,12 @@ def plus24():
 # -------------------------------------------------------
 # 옷별 함수
 
+# [옷제목, 링크, src]
+
 
 def skirt():
     skirt_data = []
-    f = open('templates/clothes/치마_data.csv', 'r')
+    f = open('./static/clothes/치마_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -382,7 +384,7 @@ def skirt():
 
 def summer_pants():
     summerpants_data = []
-    f = open('templates/clothes/여름바지_data.csv', 'r')
+    f = open('./static/clothes/여름바지_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -394,7 +396,7 @@ def summer_pants():
 
 def short_sleeve():
     shortsleeve_data = []
-    f = open('templates/clothes/반팔티_data.csv', 'r')
+    f = open('./static/clothes/반팔티_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -406,7 +408,7 @@ def short_sleeve():
 
 def short_shirts():
     shortshirts_data = []
-    f = open('templates/clothes/반팔셔츠_data.csv', 'r')
+    f = open('./static/clothes/반팔셔츠_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -418,7 +420,7 @@ def short_shirts():
 
 def shorts():
     shorts_data = []
-    f = open('templates/clothes/반바지_data.csv', 'r')
+    f = open('./static/clothes/반바지_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -430,7 +432,7 @@ def shorts():
 
 def sleeveless():
     sleeveless_data = []
-    f = open('templates/clothes/민소매_data.csv', 'r')
+    f = open('./static/clothes/민소매_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -442,7 +444,7 @@ def sleeveless():
 
 def dress():
     dress_data = []
-    f = open('templates/clothes/원피스_data.csv', 'r')
+    f = open('./static/clothes/원피스_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -454,7 +456,7 @@ def dress():
 
 def shirts():
     shirts_data = []
-    f = open('templates/clothes/셔츠_data.csv', 'r')
+    f = open('./static/clothes/셔츠_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -466,7 +468,7 @@ def shirts():
 
 def long_sleeve():
     longsleeve_data = []
-    f = open('templates/clothes/긴팔티_data.csv', 'r')
+    f = open('./static/clothes/긴팔티_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -478,7 +480,7 @@ def long_sleeve():
 
 def seven_pants():
     sevenpants_data = []
-    f = open('templates/clothes/7부바지_data.csv', 'r')
+    f = open('./static/clothes/7부바지_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -490,7 +492,7 @@ def seven_pants():
 
 def bluejacket():
     bluejacket_data = []
-    f = open('templates/clothes/청자켓_data.csv', 'r')
+    f = open('./static/clothes/청자켓_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -502,7 +504,7 @@ def bluejacket():
 
 def thin_knit():
     thinknit_data = []
-    f = open('templates/clothes/얇은니트_data.csv', 'r')
+    f = open('./static/clothes/얇은니트_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -514,7 +516,7 @@ def thin_knit():
 
 def slacks():
     slacks_data = []
-    f = open('templates/clothes/슬랙스_data.csv', 'r')
+    f = open('./static/clothes/슬랙스_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -526,7 +528,7 @@ def slacks():
 
 def cotton_pants():
     cottonpants_data = []
-    f = open('templates/clothes/면바지_data.csv', 'r')
+    f = open('./static/clothes/면바지_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -538,7 +540,7 @@ def cotton_pants():
 
 def sweatshirt():
     sweatshirt_data = []
-    f = open('templates/clothes/맨투맨_data.csv', 'r')
+    f = open('./static/clothes/맨투맨_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -550,7 +552,7 @@ def sweatshirt():
 
 def cardigan():
     cardigan_data = []
-    f = open('templates/clothes/가디건_data.csv', 'r')
+    f = open('./static/clothes/가디건_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -562,7 +564,7 @@ def cardigan():
 
 def airlinejumper():
     airlinejumper_data = []
-    f = open('templates/clothes/항공점퍼_data.csv', 'r')
+    f = open('./static/clothes/항공점퍼_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -574,7 +576,7 @@ def airlinejumper():
 
 def trenchcoat():
     trenchcoat_data = []
-    f = open('templates/clothes/트렌치코트_data.csv', 'r')
+    f = open('./static/clothes/트렌치코트_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -586,7 +588,7 @@ def trenchcoat():
 
 def jean():
     jean_data = []
-    f = open('templates/clothes/청바지_data.csv', 'r')
+    f = open('./static/clothes/청바지_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -598,7 +600,7 @@ def jean():
 
 def fieldjumper():
     fieldjumper_data = []
-    f = open('templates/clothes/야상_data.csv', 'r')
+    f = open('./static/clothes/야상_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -610,7 +612,7 @@ def fieldjumper():
 
 def knit():
     knit_data = []
-    f = open('templates/clothes/니트_data.csv', 'r')
+    f = open('./static/clothes/니트_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -622,7 +624,7 @@ def knit():
 
 def furhood():
     furhood_data = []
-    f = open('templates/clothes/기모후드티_data.csv', 'r')
+    f = open('./static/clothes/기모후드티_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -634,7 +636,7 @@ def furhood():
 
 def fleece():
     fleece_data = []
-    f = open('templates/clothes/후리스_data.csv', 'r')
+    f = open('./static/clothes/후리스_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -646,7 +648,7 @@ def fleece():
 
 def shortpadding():
     shortpadding_data = []
-    f = open('templates/clothes/숏패딩_data.csv', 'r')
+    f = open('./static/clothes/숏패딩_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -658,7 +660,7 @@ def shortpadding():
 
 def lightpadding():
     lightpadding_data = []
-    f = open('templates/clothes/경량패딩_data.csv', 'r')
+    f = open('./static/clothes/경량패딩_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -670,7 +672,7 @@ def lightpadding():
 
 def leatherjacket():
     leatherjacket_data = []
-    f = open('templates/clothes/가죽자켓_data.csv', 'r')
+    f = open('./static/clothes/가죽자켓_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -682,7 +684,7 @@ def leatherjacket():
 
 def winter_pants():
     pants_data = []
-    f = open('templates/clothes/겨울바지_data.csv', 'r')
+    f = open('./static/clothes/겨울바지_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -701,7 +703,7 @@ def winter_pants():
 
 def coat():
     coat_data = []
-    f = open('templates/clothes/두꺼운코트_data.csv', 'r')
+    f = open('./static/clothes/두꺼운코트_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -713,7 +715,7 @@ def coat():
 
 def muffler():
     muffler_data = []
-    f = open('templates/clothes/목도리_data.csv', 'r')
+    f = open('./static/clothes/목도리_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -725,7 +727,7 @@ def muffler():
 
 def glove():
     glove_data = []
-    f = open('templates/clothes/장갑_data.csv', 'r')
+    f = open('./static/clothes/장갑_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -737,7 +739,7 @@ def glove():
 
 def padding():
     padding_data = []
-    f = open('templates/clothes/패딩_data.csv', 'r')
+    f = open('./static/clothes/패딩_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -749,7 +751,7 @@ def padding():
 
 def heat():
     heat_data = []
-    f = open('templates/clothes/히트텍_data.csv', 'r')
+    f = open('./static/clothes/히트텍_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -783,5 +785,7 @@ def index(request):
     res = r.json()
     icon = res['weather'][0]['icon']
     temp = res['main']['temp']
-
+    print("hi")
+    print(one_img)
+    print(type(one_img))
     return render(request, 'weatherapp/index.html', {'icon': icon, 'temp': temp, 'one_subject': one_subject, 'two_subject': two_subject, 'three_subject': three_subject, 'four_subject': four_subject, 'five_subject': five_subject, 'six_subject': six_subject, 'one_address': one_address, 'two_address': two_address, 'three_address': three_address, 'four_address': four_address, 'five_address': five_address, 'six_address': six_address, 'one_img': one_img, 'two_img': two_img, 'three_img': three_img, 'four_img': four_img, 'five_img': five_img, 'six_img': six_img, })
