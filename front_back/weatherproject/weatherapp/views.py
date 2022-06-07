@@ -861,7 +861,18 @@ def index(request):
     icon = res['weather'][0]['icon']
     temp = res['main']['temp']
 
-    fifteen_nineteen()
+    if temp <= 4:
+        minus4()
+    elif 4 < temp <= 8:
+        five_eight()
+    elif 8 < temp <= 14:
+        nine_fourteen()
+    elif 14 < temp <= 19:
+        fifteen_nineteen()
+    elif 19 < temp <= 23:
+        twenty_twentythree()
+    elif 23 < temp:
+        plus24()
 
     return render(request, './weatherapp/index.html',
                   {'icon': icon, 'temp': temp, 'city' : city,
