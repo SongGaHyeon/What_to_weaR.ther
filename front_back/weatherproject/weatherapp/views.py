@@ -12,8 +12,8 @@ i = random.randrange(0, 89)
 
 # 4도 이하, 5-8도 -> 가현
 # 9-14도 + 9-14에 맞는 옷 엑셀 배열로 저장하는 부분-> 희원
-# 15-19도 -> 주영
-# 20-23도 -> 주희
+# 15-19도 -> 희원
+# 20-23도 -> 희원
 
 a = []
 b = []
@@ -21,11 +21,49 @@ c = []
 d = []
 e = []
 f = []
-
+one_subject = ''
+one_address = ''
+one_img = ''
+two_subject = ''
+two_address = ''
+two_img = ''
+three_subject = ''
+three_address = ''
+three_img = ''
+four_subject = ''
+four_address = ''
+four_img = ''
+five_subject = ''
+five_address = ''
+five_img = ''
+six_subject = ''
+six_address = ''
+six_img = ''
 # -------------------------------------------------------
 # 4도 이하
 
+
 def minus4():
+    global a, b, c, d, e, f
+    global one_subject
+    global one_address
+    global one_img
+    global two_subject
+    global two_address
+    global two_img
+    global three_subject
+    global three_address
+    global three_img
+    global four_subject
+    global four_address
+    global four_img
+    global five_subject
+    global five_address
+    global five_img
+    global six_subject
+    global six_address
+    global six_img
+
     a = winter_pants()
     one_subject = a[0]
     one_address = a[1]
@@ -59,10 +97,30 @@ def minus4():
 # ----------------------------------------------
 # 5-8도
 
+
 def five_eight():
+    global a, b, c, d, e, f
+    global one_subject
+    global one_address
+    global one_img
+    global two_subject
+    global two_address
+    global two_img
+    global three_subject
+    global three_address
+    global three_img
+    global four_subject
+    global four_address
+    global four_img
+    global five_subject
+    global five_address
+    global five_img
+    global six_subject
+    global six_address
+    global six_img
     a = leatherjacket()
     one_subject = a[0]
-    one = a[1]
+    one_address = a[1]
     one_img = a[2]
 
     b = lightpadding()
@@ -91,12 +149,32 @@ def five_eight():
     six_img = f[2]
 
 # ----------------------------------------------
-#9-14도
+# 9-14도
+
 
 def nine_fourteen():
+    global a, b, c, d, e, f
+    global one_subject
+    global one_address
+    global one_img
+    global two_subject
+    global two_address
+    global two_img
+    global three_subject
+    global three_address
+    global three_img
+    global four_subject
+    global four_address
+    global four_img
+    global five_subject
+    global five_address
+    global five_img
+    global six_subject
+    global six_address
+    global six_img
     a = furhood()
     one_subject = a[0]
-    one = a[1]
+    one_address = a[1]
     one_img = a[2]
 
     b = knit()
@@ -126,10 +204,31 @@ def nine_fourteen():
 
 # -------------------------------------------------------
 #  15-19도
+
+
 def fifteen_nineteen():
+    global a, b, c, d, e, f
+    global one_subject
+    global one_address
+    global one_img
+    global two_subject
+    global two_address
+    global two_img
+    global three_subject
+    global three_address
+    global three_img
+    global four_subject
+    global four_address
+    global four_img
+    global five_subject
+    global five_address
+    global five_img
+    global six_subject
+    global six_address
+    global six_img
     a = cardigan()
     one_subject = a[0]
-    one = a[1]
+    one_address = a[1]
     one_img = a[2]
 
     b = sweatshirt()
@@ -160,10 +259,30 @@ def fifteen_nineteen():
 # -------------------------------------------------------
 # 20-23도
 
+
 def twenty_twentythree():
+    global a, b, c, d, e, f
+    global one_subject
+    global one_address
+    global one_img
+    global two_subject
+    global two_address
+    global two_img
+    global three_subject
+    global three_address
+    global three_img
+    global four_subject
+    global four_address
+    global four_img
+    global five_subject
+    global five_address
+    global five_img
+    global six_subject
+    global six_address
+    global six_img
     a = seven_pants()
     one_subject = a[0]
-    one = a[1]
+    one_address = a[1]
     one_img = a[2]
 
     b = long_sleeve()
@@ -194,10 +313,30 @@ def twenty_twentythree():
 # -------------------------------------------------------
 # 24도 이상
 
+
 def plus24():
+    global a, b, c, d, e, f
+    global one_subject
+    global one_address
+    global one_img
+    global two_subject
+    global two_address
+    global two_img
+    global three_subject
+    global three_address
+    global three_img
+    global four_subject
+    global four_address
+    global four_img
+    global five_subject
+    global five_address
+    global five_img
+    global six_subject
+    global six_address
+    global six_img
     a = sleeveless()
     one_subject = a[0]
-    one = a[1]
+    one_address = a[1]
     one_img = a[2]
 
     b = shorts()
@@ -228,9 +367,12 @@ def plus24():
 # -------------------------------------------------------
 # 옷별 함수
 
+# [옷제목, 링크, src]
+
+
 def skirt():
     skirt_data = []
-    f = open('치마_data.csv', 'r')
+    f = open('.\static\clothes\치마_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -239,9 +381,10 @@ def skirt():
     f.close()
     return skirt_data[i]
 
+
 def summer_pants():
     summerpants_data = []
-    f = open('여름바지_data.csv', 'r')
+    f = open('.\static\clothes\여름바지_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -250,9 +393,10 @@ def summer_pants():
     f.close()
     return summerpants_data[i]
 
+
 def short_sleeve():
     shortsleeve_data = []
-    f = open('반팔티_data.csv', 'r')
+    f = open('.\static\clothes\반팔티_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -261,20 +405,22 @@ def short_sleeve():
     f.close()
     return shortsleeve_data[i]
 
+
 def short_shirts():
     shortshirts_data = []
-    f = open('반팔셔츠_data.csv', 'r')
+    f = open('.\static\clothes\반팔셔츠_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
         shortshirts_data.append(line)
 
     f.close()
-    return shortshirts_data[i]    
+    return shortshirts_data[i]
+
 
 def shorts():
     shorts_data = []
-    f = open('반바지_data.csv', 'r')
+    f = open('.\static\clothes\반바지_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -283,9 +429,10 @@ def shorts():
     f.close()
     return shorts_data[i]
 
+
 def sleeveless():
     sleeveless_data = []
-    f = open('민소매_data.csv', 'r')
+    f = open('.\static\clothes\민소매_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -294,9 +441,10 @@ def sleeveless():
     f.close()
     return sleeveless_data[i]
 
+
 def dress():
     dress_data = []
-    f = open('원피스_data.csv', 'r')
+    f = open('.\static\clothes\원피스_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -305,9 +453,10 @@ def dress():
     f.close()
     return dress_data[i]
 
+
 def shirts():
     shirts_data = []
-    f = open('셔츠_data.csv', 'r')
+    f = open('.\static\clothes\셔츠_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -316,9 +465,10 @@ def shirts():
     f.close()
     return shirts_data[i]
 
+
 def long_sleeve():
     longsleeve_data = []
-    f = open('긴팔티_data.csv', 'r')
+    f = open('.\static\clothes\긴팔티_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -327,9 +477,10 @@ def long_sleeve():
     f.close()
     return longsleeve_data[i]
 
+
 def seven_pants():
     sevenpants_data = []
-    f = open('7부바지_data.csv', 'r')
+    f = open('.\static\clothes\7부바지_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -338,9 +489,10 @@ def seven_pants():
     f.close()
     return sevenpants_data[i]
 
+
 def bluejacket():
     bluejacket_data = []
-    f = open('청자켓_data.csv', 'r')
+    f = open('.\static\clothes\청자켓_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -349,9 +501,10 @@ def bluejacket():
     f.close()
     return bluejacket_data[i]
 
+
 def thin_knit():
     thinknit_data = []
-    f = open('얇은니트_data.csv', 'r')
+    f = open('.\static\clothes\얇은니트_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -360,9 +513,10 @@ def thin_knit():
     f.close()
     return thinknit_data[i]
 
+
 def slacks():
     slacks_data = []
-    f = open('슬랙스_data.csv', 'r')
+    f = open('.\static\clothes\슬랙스_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -371,9 +525,10 @@ def slacks():
     f.close()
     return slacks_data[i]
 
+
 def cotton_pants():
     cottonpants_data = []
-    f = open('면바지_data.csv', 'r')
+    f = open('.\static\clothes\면바지_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -382,9 +537,10 @@ def cotton_pants():
     f.close()
     return cottonpants_data[i]
 
+
 def sweatshirt():
     sweatshirt_data = []
-    f = open('맨투맨_data.csv', 'r')
+    f = open('.\static\clothes\맨투맨_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -393,9 +549,10 @@ def sweatshirt():
     f.close()
     return sweatshirt_data[i]
 
+
 def cardigan():
     cardigan_data = []
-    f = open('가디건_data.csv', 'r')
+    f = open('.\static\clothes\가디건_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -404,9 +561,10 @@ def cardigan():
     f.close()
     return cardigan_data[i]
 
+
 def airlinejumper():
     airlinejumper_data = []
-    f = open('항공점퍼_data.csv', 'r')
+    f = open('.\static\clothes\항공점퍼_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -415,9 +573,10 @@ def airlinejumper():
     f.close()
     return airlinejumper_data[i]
 
+
 def trenchcoat():
     trenchcoat_data = []
-    f = open('트렌치코트_data.csv', 'r')
+    f = open('.\static\clothes\트렌치코트_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -426,9 +585,10 @@ def trenchcoat():
     f.close()
     return trenchcoat_data[i]
 
+
 def jean():
     jean_data = []
-    f = open('청바지_data.csv', 'r')
+    f = open('.\static\clothes\청바지_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -437,9 +597,10 @@ def jean():
     f.close()
     return jean_data[i]
 
+
 def fieldjumper():
     fieldjumper_data = []
-    f = open('야상_data.csv', 'r')
+    f = open('.\static\clothes\야상_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -448,9 +609,10 @@ def fieldjumper():
     f.close()
     return fieldjumper_data[i]
 
+
 def knit():
     knit_data = []
-    f = open('니트_data.csv', 'r')
+    f = open('.\static\clothes\니트_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -459,9 +621,10 @@ def knit():
     f.close()
     return knit_data[i]
 
+
 def furhood():
     furhood_data = []
-    f = open('기모후드티_data.csv', 'r')
+    f = open('.\static\clothes\기모후드티_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -473,7 +636,7 @@ def furhood():
 
 def fleece():
     fleece_data = []
-    f = open('후리스_data.csv', 'r')
+    f = open('.\static\clothes\후리스_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -485,7 +648,7 @@ def fleece():
 
 def shortpadding():
     shortpadding_data = []
-    f = open('숏패딩_data.csv', 'r')
+    f = open('.\static\clothes\숏패딩_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -497,7 +660,7 @@ def shortpadding():
 
 def lightpadding():
     lightpadding_data = []
-    f = open('경량패딩_data.csv', 'r')
+    f = open('.\static\clothes\경량패딩_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -509,7 +672,7 @@ def lightpadding():
 
 def leatherjacket():
     leatherjacket_data = []
-    f = open('가죽자켓_data.csv', 'r')
+    f = open('.\static\clothes\가죽자켓_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -521,7 +684,7 @@ def leatherjacket():
 
 def winter_pants():
     pants_data = []
-    f = open('겨울바지_data.csv', 'r')
+    f = open('.\static\clothes\겨울바지_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -530,10 +693,17 @@ def winter_pants():
     f.close()
     return pants_data[i]
 
+# 제목, 링크, 이미지src
+
+    # [[]
+    # []
+    # []
+    # []]
+
 
 def coat():
     coat_data = []
-    f = open('두꺼운코트_data.csv', 'r')
+    f = open('.\static\clothes\두꺼운코트_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -545,7 +715,7 @@ def coat():
 
 def muffler():
     muffler_data = []
-    f = open('목도리_data.csv', 'r')
+    f = open('.\static\clothes\목도리_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -557,7 +727,7 @@ def muffler():
 
 def glove():
     glove_data = []
-    f = open('장갑_data.csv', 'r')
+    f = open('.\static\clothes\장갑_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -569,7 +739,7 @@ def glove():
 
 def padding():
     padding_data = []
-    f = open('패딩_data.csv', 'r')
+    f = open('.\static\clothes\패딩_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -581,7 +751,7 @@ def padding():
 
 def heat():
     heat_data = []
-    f = open('히트텍_data.csv', 'r')
+    f = open('.\static\clothes\히트텍_data.csv', 'r')
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -615,5 +785,7 @@ def index(request):
     res = r.json()
     icon = res['weather'][0]['icon']
     temp = res['main']['temp']
-
-    return render(request, 'weatherapp/index.html', {'icon': icon, 'temp': temp, 'one_subject': a[0], 'two_subject': b[0], 'three_subject': c[0], 'four_subject': d[0], 'five_subject': e[0], 'six_subject': f[0], 'one_address': a[1], 'two_address': b[1], 'three_address': c[1], 'four_address': d[1], 'five_address': e[1], 'six_address': f[1], 'one_img': a[2], 'two_img': b[2], 'three_img': c[2], 'four_img': d[2], 'five_img': e[2], 'six_img': f[2], })
+    print("hi")
+    print(one_img)
+    print(type(one_img))
+    return render(request, 'weatherapp/index.html', {'icon': icon, 'temp': temp, 'one_subject': one_subject, 'two_subject': two_subject, 'three_subject': three_subject, 'four_subject': four_subject, 'five_subject': five_subject, 'six_subject': six_subject, 'one_address': one_address, 'two_address': two_address, 'three_address': three_address, 'four_address': four_address, 'five_address': five_address, 'six_address': six_address, 'one_img': one_img, 'two_img': two_img, 'three_img': three_img, 'four_img': four_img, 'five_img': five_img, 'six_img': six_img, })
