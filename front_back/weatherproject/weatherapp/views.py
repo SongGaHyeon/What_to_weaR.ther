@@ -10,7 +10,7 @@ import random
 
 # Create your views here.
 
-i = random.randrange(0, 89)
+i = 0
 '''
 요부분 전체적으로 추가해주세요
 레퍼런스 thinknit()
@@ -19,6 +19,9 @@ if len(thinknit_data) < i:
     j = i % len(thinknit_data)
 else: j = i
 '''
+
+# if len(skirt_data) < i:
+#     j = i % len()
 
 # 4도 이하, 5-8도 -> 가현
 # 9-14도 + 9-14에 맞는 옷 엑셀 배열로 저장하는 부분-> 희원
@@ -384,7 +387,6 @@ def skirt():
     skirt_data = []
 
     f = open("./weatherapp/static\clothes\치마_data.csv", 'r')
-    
 
     rdr = csv.reader(f)
 
@@ -474,7 +476,6 @@ def dress():
     for line in rdr:
         dress_data.append(line)
 
-
     f.close()
     return dress_data[i]
 
@@ -546,7 +547,8 @@ def thin_knit():
 
     if len(thinknit_data) < i:
         j = i % len(thinknit_data)
-    else: j = i
+    else:
+        j = i
     return thinknit_data[j]
 
 
@@ -850,8 +852,9 @@ def heat():
 #     return ~~
 
 
-
 def index(request):
+    global i
+    i = random.randrange(0, 89)
     city = 'Seoul'
     appid = '0de8ed3564750bc9221f0e10a4a2031d'
     URL = 'https://api.openweathermap.org/data/2.5/weather'
@@ -861,21 +864,10 @@ def index(request):
     icon = res['weather'][0]['icon']
     temp = res['main']['temp']
 
-    if temp <= 4:
-        minus4()
-    elif 4 < temp <= 8:
-        five_eight()
-    elif 8 < temp <= 14:
-        nine_fourteen()
-    elif 14 < temp <= 19:
-        fifteen_nineteen()
-    elif 19 < temp <= 23:
-        twenty_twentythree()
-    elif 23 < temp:
-        plus24()
+    fifteen_nineteen()
 
     return render(request, './weatherapp/index.html',
-                  {'icon': icon, 'temp': temp, 'city' : city,
+                  {'icon': icon, 'temp': temp, 'city': city,
                    'one_subject': one_subject, 'two_subject': two_subject, 'three_subject': three_subject, 'four_subject': four_subject, 'five_subject': five_subject, 'six_subject': six_subject,
                    'one_address': one_address, 'two_address': two_address, 'three_address': three_address, 'four_address': four_address, 'five_address': five_address, 'six_address': six_address,
                    'one_img': one_img, 'two_img': two_img, 'three_img': three_img, 'four_img': four_img, 'five_img': five_img, 'six_img': six_img, })
