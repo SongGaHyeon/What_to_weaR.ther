@@ -382,7 +382,10 @@ def plus24():
 
 def skirt():
     skirt_data = []
+
     f = open("./weatherapp/static\clothes\치마_data.csv", 'r')
+    
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -394,7 +397,9 @@ def skirt():
 
 def summer_pants():
     summerpants_data = []
+
     f = open("./weatherapp/static/clothes/여름바지_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -406,7 +411,9 @@ def summer_pants():
 
 def short_sleeve():
     shortsleeve_data = []
+
     f = open("./weatherapp/static/clothes/반팔티_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -418,6 +425,7 @@ def short_sleeve():
 
 def short_shirts():
     shortshirts_data = []
+
     f = open("./weatherapp/static/clothes/반팔셔츠_data.csv", 'r')
     rdr = csv.reader(f)
 
@@ -430,7 +438,9 @@ def short_shirts():
 
 def shorts():
     shorts_data = []
+
     f = open("./weatherapp/static/clothes/반바지_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -442,7 +452,9 @@ def shorts():
 
 def sleeveless():
     sleeveless_data = []
+
     f = open("./weatherapp/static/clothes/민소매_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -454,7 +466,9 @@ def sleeveless():
 
 def dress():
     dress_data = []
+
     f = open("./weatherapp/static/clothes/원피스_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -467,6 +481,7 @@ def dress():
 
 def shirts():
     shirts_data = []
+
     f = open("./weatherapp/static/clothes/셔츠_data.csv", 'r')
     rdr = csv.reader(f)
 
@@ -480,6 +495,7 @@ def shirts():
 def long_sleeve():
     longsleeve_data = []
     f = open("./weatherapp/static/clothes/긴팔티_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -491,7 +507,9 @@ def long_sleeve():
 
 def seven_pants():
     sevenpants_data = []
+
     f = open("./weatherapp/static/clothes/칠부바지_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -503,6 +521,7 @@ def seven_pants():
 
 def bluejacket():
     bluejacket_data = []
+
     f = open("./weatherapp/static/clothes/청자켓_data.csv", 'r')
     rdr = csv.reader(f)
 
@@ -515,7 +534,9 @@ def bluejacket():
 
 def thin_knit():
     thinknit_data = []
+
     f = open("./weatherapp/static/clothes/얇은니트_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -531,7 +552,9 @@ def thin_knit():
 
 def slacks():
     slacks_data = []
+
     f = open("./weatherapp/static/clothes/슬랙스_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -543,7 +566,9 @@ def slacks():
 
 def cotton_pants():
     cottonpants_data = []
+
     f = open("./weatherapp/static/clothes/면바지_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -555,7 +580,9 @@ def cotton_pants():
 
 def sweatshirt():
     sweatshirt_data = []
+
     f = open("./weatherapp/static/clothes/맨투맨_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -567,7 +594,9 @@ def sweatshirt():
 
 def cardigan():
     cardigan_data = []
+
     f = open("./weatherapp/static/clothes/가디건_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -579,7 +608,9 @@ def cardigan():
 
 def airlinejumper():
     airlinejumper_data = []
+
     f = open("./weatherapp/static/clothes/항공점퍼_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -591,7 +622,9 @@ def airlinejumper():
 
 def trenchcoat():
     trenchcoat_data = []
+
     f = open("./weatherapp/static/clothes/트렌치코트_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -603,7 +636,9 @@ def trenchcoat():
 
 def jean():
     jean_data = []
+
     f = open("./weatherapp/static/clothes/청바지_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -615,7 +650,9 @@ def jean():
 
 def fieldjumper():
     fieldjumper_data = []
+
     f = open("./weatherapp/static/clothes/야상_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -627,7 +664,9 @@ def fieldjumper():
 
 def knit():
     knit_data = []
+
     f = open("./weatherapp/static/clothes/니트_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -639,7 +678,9 @@ def knit():
 
 def furhood():
     furhood_data = []
+
     f = open("./weatherapp/static/clothes/기모후드티_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -651,6 +692,7 @@ def furhood():
 
 def fleece():
     fleece_data = []
+
     f = open("./weatherapp/static/clothes/후리스_data.csv", 'r')
     rdr = csv.reader(f)
 
@@ -664,6 +706,7 @@ def fleece():
 def shortpadding():
     shortpadding_data = []
     f = open("./weatherapp/static/clothes/숏패딩_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -675,7 +718,9 @@ def shortpadding():
 
 def lightpadding():
     lightpadding_data = []
+
     f = open("./weatherapp/static/clothes/경량패딩_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -687,7 +732,9 @@ def lightpadding():
 
 def leatherjacket():
     leatherjacket_data = []
+
     f = open("./weatherapp/static/clothes/가죽자켓_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -699,7 +746,9 @@ def leatherjacket():
 
 def winter_pants():
     pants_data = []
+
     f = open("./weatherapp/static/clothes/겨울바지_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -718,7 +767,9 @@ def winter_pants():
 
 def coat():
     coat_data = []
+
     f = open("./weatherapp/static/clothes/두꺼운코트_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -730,7 +781,9 @@ def coat():
 
 def muffler():
     muffler_data = []
+
     f = open("./weatherapp/static/clothes/목도리_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -742,7 +795,9 @@ def muffler():
 
 def glove():
     glove_data = []
+
     f = open("./weatherapp/static/clothes/장갑_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -754,7 +809,9 @@ def glove():
 
 def padding():
     padding_data = []
+
     f = open("./weatherapp/static/clothes/패딩_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
@@ -766,7 +823,9 @@ def padding():
 
 def heat():
     heat_data = []
+
     f = open("./weatherapp/static/clothes/히트텍_data.csv", 'r')
+
     rdr = csv.reader(f)
 
     for line in rdr:
