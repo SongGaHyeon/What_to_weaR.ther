@@ -29,7 +29,12 @@ def winter_pants():
         pants_data.append(line)
 
     f.close()
-    return pants_data[i]
+    if len(pants_data) < i:
+        j = i % len(pants_data)
+    else:
+        j = i
+    print("j :", j)
+    return pants_data[j]
 
 minus4()
 print(one_subject)
