@@ -33,6 +33,12 @@
             -moz-user-select: none;
             user-select: none;
         }
+
+        .btn-primary {
+          color: #fff;
+          background-color: #232425;
+          border-color: #030303;
+        }
         
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
@@ -81,12 +87,13 @@
         <section class="py-5 text-center container">
             <div class="row py-lg-5">
                 <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light">오늘은 뭐 입지?</h1>
+                    <h1 class="fw-light" style = "font-size: 50px;"><b>오늘은 뭐 입지?</b></h1>
                     <p class="lead text-muted">날씨 기반 옷 추천 시스템</p>
-                    <p style="font-weight: bold;">
+                    <br style="font-weight: bold;" >
                         weather information
+                            <br> ☀☁☃🌧 <br>
                     </p>
-                    <img src="http://openweathermap.org/img/w/{{icon}}.png" width="75px" />
+                    <img src="http://openweathermap.org/img/w/{{icon}}.png" width="150px" />
                     <p>
                         <div>
                             지역 : {{city}}
@@ -102,10 +109,8 @@
 
         <div class="album py-5 bg-light">
             <div class="container">
-
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
-
                         <div class="card" style="width: 18rem;">
                             <img id = "first_img" src="{{one_img}}"  width="200" height="400" class="card-img-top" alt="...">
                             <div id = "first_body" class="card-body">
@@ -128,7 +133,7 @@
                             <img id = "third_img" src="{{three_img}}" width="200" height="400" class="card-img-top" alt="...">
                             <div id = "third_body" class="card-body">
                                 <h5 class="card-title">{{three_subject}}</h5>
-                                <a href={{three_address}} class="btn btn-primary">Go MUSINSA</a>
+                                <a href={{three_address}} class="btn btn-primary" >Go MUSINSA</a>
                             </div>
                         </div>
                     </div>
@@ -162,7 +167,6 @@
                 </div>
             </div>
         </div>
-
     </main>
 
 
