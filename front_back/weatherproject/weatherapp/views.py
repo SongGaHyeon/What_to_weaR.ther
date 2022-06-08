@@ -1024,7 +1024,7 @@ def index(request):
 
     if temp <= 4:
         minus4()
-    elif 4 < temp <= 8:
+    elif temp <= 8:
         five_eight()
     elif 8 < temp <= 14:
         nine_fourteen()
@@ -1032,7 +1032,7 @@ def index(request):
         fifteen_nineteen()
     elif 19 < temp <= 23:
         twenty_twentythree()
-    elif 23 < temp:
+    else:
         plus24()
 
     return render(request, './weatherapp/index.html',
